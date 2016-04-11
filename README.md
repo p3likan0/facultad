@@ -1,2 +1,2 @@
-# facultad
-Repositorio de trabajos prácticos
+# Facultad
+Repositorio de trabajos prácticos en latex.
