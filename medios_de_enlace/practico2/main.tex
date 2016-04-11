@@ -1,0 +1,207 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage[mediumspace,mediumqspace,squaren]{SIunits}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{enumerate} % enumerados
+\usepackage{diagbox}
+\usepackage{booktabs}
+\usepackage{float} %para usar [H]
+
+
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Practico de Laboratorio N°2: Adaptación en lineas de transmisión con un stub }								% Title
+\author{}								% Author
+\date{2015}											% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+     \includegraphics[scale = 0.8]{Logo_UTN.png}\\[1.0 cm]	% University Logo
+    \textsc{\LARGE Universidad Tecnológica Nacional}\\[2.0 cm]	% University Name
+	\textsc{\Large Curso 3R2}\\[0.5 cm]				% Course Code
+	\textsc{\large Medios de Enlace}\\[0 cm]				% Course Name
+	\textrm{\large (Ing. Contreras, Luis Candelario)}\\[0.5 cm]
+    \rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Autores:}\\
+			Bianchini, Bruno\\Fichetti P. Tomás\\Guizzo, José\\Bosse, Esteban A.
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+			\emph{Legajo:} \\
+			 63070\\62281\\62165\\62930									% Your Student Number
+		\end{flushright}
+	\end{minipage}\\[2 cm]
+	
+	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Marco Te\'orico}
+Se tiene una fuente de señal conectada a una línea de transmisión de impedancia característica $Z_O = 50 \Omega$
+la que está terminada en una impedancia de carga $Z_L$.
+
+Se desea adaptar la impedancia de carga $Z_L$ a la impedancia característica de la línea $Z_O = 50 \Omega$, con un
+\textbf{stub paralelo} terminado en circuito abierto.
+
+La frecuencia del generador es: $f = 410 MHz.$
+Considerar que la velocidad de propagación en el cable coaxil es $v_P = 0.66*C$ Por lo tanto, la longitud de onda será:
+$\lambda = \frac{v_P}{f}\lambda = \frac{v_P}{f}$
+
+Las impedancias de carga $Z_L$ valen:
+\begin{itemize}
+ \item $Z_{L1} = 17 - j 5,3 \Omega$
+ \item $Z_{L2} = 50 \Omega$
+\end{itemize}
+
+\section{Materiales Requeridos}
+Los elementos utilizados en siguiente práctico son:
+\begin{itemize}
+
+ \item Generador de onda cuadrada ($f = 100 KHz; V= 3 V_{pp}$) 
+ \item Vatímetro marca BIRD.
+ \item Tapón de medición para vatímetro BIRD: $f = 200-500 MHz; P = 50 W$
+ \item Fuente de alimentación $12 V$.
+ \item Línea de transmisión $Z_O = 50 \Omega$.
+ \item Conectores varios: BNC hembra-hembra, BNC triple hembra (T),UHF hembra – N macho.
+ \item Impedancias de carga ($Z_{L1}$  y $Z_{L2}$).
+ \item Cables varios (numerados 10, 11, 12) para interconexión (ya instalados).
+\end{itemize}
+
+
+\section{Procedimiento}
+
+\subsection{Actividad N°1}
+Identificar el esquema del punto 4.3 (ya está armado en el LdC).
+
+\subsection{Actividad N°2}
+Conectar la impedancia de carga $Z_{L1}$ al vatímetro.
+
+\subsection{Actividad N°3}
+Conectar el generador de señal a la frecuencia de trabajo $f = 410 MHz$.
+\subsection{Actividad N°4}
+Con el vatímetro, verificar la existencia de potencia $P_i$ entregada por el transmisor (debe indicar LOW) a la impedancia de carga
+$Z_L$.
+
+\subsection{Actividad N°5}
+Medir la potencia incidente $P_i$  y la potencia reflejada $P_r$. Para ello se debe girar el tapón de medición del Vatímetro BIRD hacia la
+carga $(P_i)$ o hacia el generador $(P_r)$, según indique la flecha en la parte superior del tapón de medición.
+
+\textbf{En $Z_{L1}$:}
+
+$P_i:4 $
+$P_r:0.6 $
+
+\textbf{En $Z_{L2}$:}
+
+$P_i:3.2 $
+$P_r:0.6 $
+
+\subsection{Actividad N°6}
+ Calcular el coeficiente de reflexión $\Gamma 1$  y la Relación de Onda Estacionaria sin ningún stub ($ROE1ss$) conectado a la
+ línea de transmisión.
+
+\textbf{En $Z_{L1}$:}
+
+$\Gamma 1_{ss}:0.194$
+$ROE1ss: 1.48$
+
+\textbf{En $Z_{L2}$:}
+
+$\Gamma 1_{ss}:0.2421$
+
+$ROE1ss:1.64$
+
+\subsection{Actividad N°7}
+Conectar el adaptador BNC tipo T luego del vatímetro.
+
+\subsection{Actividad N°8}
+Conectar la impedancia de carga mediante el segmento de línea calculado y en el extremo libre, conectar el stub
+adecuado de longitud $L$.
+
+\subsection{Actividad N°9}
+Medir la potencia incidente $P_i$ y la potencia reflejada $P_r$.
+
+\textbf{En $Z_{L1}$:}
+
+$P_i:4.4 $
+$P_r:0.1 $
+
+\textbf{En $Z_{L2}$:}
+
+$P_i:3.2 $
+$P_r:0 $
+
+\subsection{Actividad N°10}
+ Calcular el coeficiente de reflexión $\Gamma 1$  y la Relación de Onda Estacionaria con el stub
+ ($ROE1cs$) conectado a la línea de transmisión.
+\textbf{En $Z_{L1}$:}
+
+ $\Gamma 1_{cs}:0$
+ $ROE1ss: 1$
+
+ \textbf{En $Z_{L2}$:}
+ 
+ $\Gamma 2_{cs}:0$
+ $ROE2ss: 1$
+\subsection{Actividad N°11}
+ Repetir desde el punto 2) para la carga $Z_{L2}$.
+ 
+ Est\'an resueltos al final de cada actividad.
+ 
+\section{Cuestionario}
+\begin{itemize}
+
+\item ¿Qué implica que la línea de transmisión esté adaptada?
+
+Implica que no va a existir onda reflejada en la linea de transmisión, esto hace que la carga pueda aprovechar toda la potencia del generador.
+\item ¿Qué resultado se obtendría si el stub para $Z_{L1}$  fuera más largo?
+
+Existir\'ia una onda estacionaria reflejada, dejando la linea de transmisión no adaptada y produce un movimiento en sentido horario en el \'abaco de smith en el largo del stub.
+\item ¿Qué resultado se obtendría si el stub para $Z_{L1}$  fuera más corto?
+
+Produce el mismo fen\'omeno que la linea mas corta pero esta hace que nos movamos en el \'abaco en sentido anti-horario.
+\item ¿Por qué para $ZL2$ resulta $\Gamma 2 = 0$ y $ROE2 = 1$?
+
+Esto sucede porque la linea se encuentra perfectamente adaptada, no habiendo onda reflejada y por ende siendo el $ROE2 = 1$.
+\end{itemize}
+
+\end{document}

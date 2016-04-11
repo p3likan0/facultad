@@ -1,0 +1,276 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage[mediumspace,mediumqspace,squaren]{SIunits}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{enumerate} % enumerados
+\usepackage{diagbox}
+\usepackage{booktabs}
+\usepackage{float} %para usar [H]
+
+
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Practico de Laboratorio N°1: Adaptación en lineas de transmisión }								% Title
+\author{}								% Author
+\date{2015}											% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+     \includegraphics[scale = 0.8]{Logo_UTN.png}\\[1.0 cm]	% University Logo
+    \textsc{\LARGE Universidad Tecnológica Nacional}\\[2.0 cm]	% University Name
+	\textsc{\Large Curso 3R2}\\[0.5 cm]				% Course Code
+	\textsc{\large Medios de Enlace}\\[0 cm]				% Course Name
+	\textrm{\large (Ing. Contreras, Luis Candelario)}\\[0.5 cm]
+    \rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Autores:}\\
+			Bianchini, Bruno\\Fichetti P. Tomás\\Guizzo, José\\Bosse, Esteban A.
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+			\emph{Legajo:} \\
+			 63070\\62281\\62165\\62930									% Your Student Number
+		\end{flushright}
+	\end{minipage}\\[2 cm]
+	
+	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivo General}
+
+\begin{itemize}
+ \item Analizar la respuesta a un escalón de tensión de una línea de trasmisión coaxial de impedancia característica \textbf{Zo} terminada en distintos valores de impedancia de carga ZL.
+ \item Analizar cualitativamente la manera de determinar la impedancia característica (\textbf{Zo}) de una línea de transmisión por observación de la disminución y/o anulación de la distorsión de la señal en la carga.
+ \item Medir el tiempo de retardo (\textbf{tr}) en una línea de trasmisión.
+ \item Medir la atenuación (\textbf{At}) en decibeles (\textbf{db}) de una línea de trasmisión.
+ \item Medir la constante de propagación (\textbf{K = Vp / C}) en una línea de trasmisión.
+ \end{itemize} 
+
+\section{Conclusiones}
+Cada grupo de trabajo (no más de 3 alumnos por grupo) deberá realizar un informe, el que deberá ser presentado a su respectivo Profesor de Cátedra antes de la finalización del año lectivo 2015, como condición adicional a las existentes para lograr la regularización de la materia.
+El informe deberá ser presentado en hojas formato A4 a faz simple y deberá tener:
+
+\begin{itemize}
+ \item La presente guía de TP llenada con los valores requeridos.
+ \item Mediciones y cálculos realizados y gráficos observados.
+ \item Expresar brevemente el marco teórico que se relaciona con este trabajo práctico.
+ \item Indicar la experiencia adquirida en la realización del trabajo práctico en el Laboratorio de Comunicaciones.
+ \item Realizar sugerencias (si las hubiere) para futuros trabajos prácticos.
+ \end{itemize} 
+
+
+
+\section{Materiales Requeridos}
+Los elementos utilizados en siguiente práctico son:
+\begin{itemize}
+
+
+ \item Generador de onda cuadrada (f = 100 KHz; V= 3 Vpp)
+ \item Osciloscopio de doble trazo.
+ \item Multímetro.
+ \item Cable coaxial de 75 $\Omega$  (305 metros)
+ \item Kit de adaptación en líneas de transmisión del LdC.
+\end{itemize}
+
+
+\section{Actividades}
+
+\subsection{Actividad N°1}
+ En base al circuito propuesto, conectar una resistencia de carga ZL= 75 $\Omega$ en el punto \textbf{B}; observar las formas de onda en los puntos \textbf{A} y \textbf{B} (la línea de transmisión está adaptada: Zo = ZL = 75 $\Omega$). 
+
+ \begin{center}
+
+  TIME/DIV: 2 $\micro$S
+
+  Ch1:2 V/div \hspace{0.5cm} $V_{pp}$= 2 x 2  \hspace{0.5cm}   $V_{pp}$=4 V
+  
+  Ch2: 2 V/div \hspace{0.5cm} $V_{pp}$= 1.6 x 2 \hspace{0.5cm}   $V_{pp}$=3.2 V
+\end{center}
+                                                  
+ 
+\subsection{Actividad N°2}
+Graficar la forma de onda de los canales Ch1 y Ch2.
+
+\begin{figure}[hbt]
+\centering
+\includegraphics[scale = 0.3]{imagen7.jpg}\\
+\caption{Circuito implementado en objetivo particular N°1}
+\label{Figura 1}
+\end{figure}
+
+\subsection{Actividad N°3}
+ Como se puede observar en la imagen anterior, la forma de onda en el canal A es igual a la forma de onda en el canal B, esto se debe a que la linea de transmisión se encuentra adaptada.
+ El retardo de tiempo que observamos se debe a la velocidad de propagación de la onda en la linea.
+
+\subsection{Actividad N°4}
+En el terminal \textbf{B} de la línea de transmisión, conectar el potenciómetro (ZL= variable).Variar el potenciómetro desde cero al máximo.
+Encontrar la posición en que desaparecen las distorsiones, observando la señal a la salida del generador y en la carga. Mantener la posición obtenida por el potenciómetro. 
+Cambiar de posición el selector y medir su valor con un óhmmetro.
+
+ \begin{center}
+
+\begin{figure}[hbt]
+\centering
+\includegraphics[scale = 0.3]{imagen8.jpg}\\
+\caption{Circuito implementado en objetivo particular N°1}
+\label{Figura 1}
+\end{figure}
+
+ 
+ \textbf{Rpot}=37,71$\Omega$
+\end{center}
+             
+
+\subsection{Actividad N°5}
+Al mover el potenciómetro, variamos la impedancia de la carga y con la ayuda de el osciloscopio pudimos comparar el canal A y B, viendo en la forma de onda la adaptación de la linea
+
+\subsection{Actividad N°6}
+6) Con la línea adaptada (ZL = Zo = 75 $\Omega$), medir el tiempo de retardo (\textbf{tr} entre los puntos \textbf{A} y \textbf{B}.
+El tiempo de retardo puede ser observado en la primera imagen del trabajo practico
+
+\begin{center}
+$t_r$=2 x 0,6 \hspace{0.5cm} $t_r$=1,2$\micro$S
+\end{center}
+
+\subsection{Actividad N°7}
+ Con la línea adaptada (ZL = Zo = 75 $\Omega$), calcular la atenuación de la línea de transmisión (\textbf{At}) en decibeles (\textbf{dB}).
+
+ 
+ \begin{center}
+\textbf{$E_a$}= 4 $V_{pp}$
+
+\textbf{$E_b$}= 3,2 $V_{pp}$
+ 
+ \vspace{0.5cm}
+ 
+   $A_t$= 20.log  $(\frac{\textbf{$E_b$}}{\textbf{$E_a$}})$  \hspace{0.5cm}   \textbf{$A_t$}= 20.log  $(\frac{3,2}{4})$
+ 
+  \vspace{0.5cm}
+ 
+ \textbf{$A_t$}= -1,938 dB
+ \end{center}
+ 
+\subsection{Actividad N°8}
+Calcular la constante de propagación (\textbf{K = Vp / C}) de la línea de transmisión por intermedio de la velocidad de propagación \textbf{Vp}.
+ \begin{center}
+     $V_p$=$(\frac{Longitud de la linea de transmision }{t_r})$       \hspace{0.5cm}    $V_p$=$(\frac{305m}{1,2 {\micro}S})$
+      
+      \vspace{0.5cm}
+    
+    $V_p$=254166666,7$(\frac{m}{s})$
+
+ \end{center}
+
+\subsection{Actividad N°9}
+ En el punto \textbf{B} de línea de transmisión, desconectar la impedancia de carga ZL = 75 $\Omega$; manteniendo el circuito abierto  (ZL = ∞), observar las formas de onda en los puntos \textbf{A} y \textbf{B}.
+
+\subsection{Actividad N°10}
+ Graficar la forma de onda de los canales Ch1 y Ch2.
+
+ \begin{figure}[hbt]
+\centering
+\includegraphics[scale = 0.3]{imagen8.jpg}\\
+\caption{Circuito implementado en objetivo particular N°1}
+\label{Figura 1}
+\end{figure}
+
+\subsection{Actividad N°11}
+ Al no haber ipedancia de carga, el circuito esta abierto. Esto produce que gran parte de la onda sea reflejada, superponiendose a la onda emitida y la reflejada.
+
+\subsection{Actividad N°12}
+ En el punto \textbf{B} de línea de transmisión, cortocircuitar la impedancia de carga (ZL= 0); observar las formas de onda en los puntos \textbf{A} y \textbf{B}.
+ 
+\subsection{Actividad N°13}
+ Graficar la forma de onda de los canales Ch1 y Ch2.
+ \begin{figure}[hbt]
+\centering
+\includegraphics[scale = 0.3]{imagen1.jpg}\\
+\caption{Circuito implementado en objetivo particular N°1}
+\label{Figura 1}
+\end{figure}
+
+\subsection{Actividad N°14}
+ Al acortocircuitar la carga, la lectura del canal B es practicamente constante y la del canal A, la onda cuadrada se ve modificada.
+\subsection{Actividad N°15}
+ Graficar la forma de onda de los canales Ch1 y Ch2.
+ 
+\subsection{Actividad N°16}
+ Calcular el coeficiente de reflexión de tensión en la carga para los tres casos de impedancia de carga analizados (ZL1=75 $\Omega$; ZL= ∞; ZL3 = 0).
+ 
+$\Gamma_E = \frac{Z_n-1}{Z_n+1}$  \vspace{0.5cm}
+
+$Z_n = {\frac{Z_L}{Z_0}}$    \vspace{0.5cm}
+
+\underline{Para $Z_{L1}=75\Omega$}
+\begin{center}
+$Z_n = {\frac{75 \Omega}{75 \Omega}}$ \hspace{0.5cm}   $Z_n = 1$ \hspace{0.5cm} 
+\vspace{0.5cm}
+
+$\Gamma_E = \frac{1-1}{1+1}$  \hspace{0.5cm} $\Gamma_E = 0$ 
+\end{center}
+
+\underline{Para $Z_{L2}=\infty$}
+\begin{center}
+$Z_n = {\frac{\infty}{75 \Omega}}$ \hspace{0.5cm}  $Z_n = \infty$ \hspace{0.5cm} 
+\vspace{0.5cm}
+
+$\Gamma_E = \frac{\infty-1}{\infty+1}$  \hspace{0.5cm} $\Gamma_E = 1$ 
+\end{center}
+
+
+\underline{Para $Z_{L3}=0\Omega$}
+\begin{center}
+$Z_n = {\frac{0\Omega}{75 \Omega}}$ \hspace{0.5cm}  $Z_n = 0$ \hspace{0.5cm} 
+\vspace{0.5cm}
+
+$\Gamma_E = \frac{0-1}{0+1}$  \hspace{0.5cm} $\Gamma_E = -1$ 
+\end{center}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale = 0.5]{gra1.jpg}\\
+%\caption{Gráfico de los datos relevados en la tabla N°1}
+%\label{Figura 2}
+%\end{figure}
+
+
+\end{document}
